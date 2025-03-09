@@ -1,0 +1,130 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+  min-height: 500px;
+}
+
+.hero {
+  max-width: 200px;
+}
+
+.heroContainer {
+  position: relative;
+  width: 250px;
+  margin: 0 auto 10px;
+  text-align: center;
+}
+
+.colorMode {
+  position: absolute;
+  right: 0px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info h2 {
+  font-size: 2rem;
+  background: linear-gradient(
+    90deg,
+    #0e286f,
+    #aec011,
+    #c81010
+  ); /* Dark gradient */
+  background-size: 300%; /* Makes the gradient larger for the animation effect */
+  -webkit-background-clip: text; /* Clips the gradient to the text */
+  -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
+  text-align: center; /* Centers the text */
+  animation: gradientMove 3s infinite; /* Applies the animation */
+  background-color: white; /* White background for the h2 element */
+  padding: 20px; /* Adds padding to the h2 */
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.info span {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.info span a img {
+  width: 40px;
+}
+
+.info .resumeLink {
+  width: fit-content;
+  align-self: center;
+}
+
+.description {
+    max-width: 24ch;
+    align-self: center;
+  }
+
+button {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 20px;
+  width: 126px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+@media (width >= 800px) {
+  .container {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .hero {
+    max-width: 350px;
+    width: 350px;
+  }
+  .heroContainer{
+    width:400px;
+  }
+}
+
+@media (width >= 1400px) {
+  .hero {
+    max-width: 400px;
+    width: 400px;
+  }
+  .heroContainer{
+    width:450px;
+  }
+}
