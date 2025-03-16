@@ -12,7 +12,6 @@ export const ThemeProvider = ({ children }) => {
   useEffect(() => {
     document.body.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    console.log("theme changed");
   }, [theme]);
 
   const toggleTheme = () => {

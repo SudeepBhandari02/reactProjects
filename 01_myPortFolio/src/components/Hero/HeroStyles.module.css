@@ -39,9 +39,11 @@
     #0e286f,
     #aec011,
     #c81010
-  ); /* Dark gradient */
+  ); 
+  /* Dark gradient */
   background-size: 300%; /* Makes the gradient larger for the animation effect */
   -webkit-background-clip: text; /* Clips the gradient to the text */
+  background-clip: text; /* Standard property for compatibility */
   -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
   text-align: center; /* Centers the text */
   animation: gradientMove 3s infinite; /* Applies the animation */
