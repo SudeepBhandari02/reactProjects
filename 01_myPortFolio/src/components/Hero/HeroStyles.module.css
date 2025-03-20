@@ -8,7 +8,7 @@
 }
 
 .hero {
-  max-width: 200px;
+  max-width: 250px;
 }
 
 .heroContainer {
@@ -123,8 +123,8 @@ button:active {
 
 @media (width >= 1400px) {
   .hero {
-    max-width: 400px;
-    width: 400px;
+    max-width: 500px;
+    width: 450px;
   }
   .heroContainer{
     width:450px;

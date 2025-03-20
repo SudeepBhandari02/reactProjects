@@ -1,5 +1,3 @@
-import React from 'react'
-
 const ProjectCard = (props) => {
 
  
@@ -13,4 +11,4 @@ const ProjectCard = (props) => {
   )
 }
 
-export default ProjectCard
+export default ProjectCard;

@@ -66,7 +66,7 @@
   .container .projectContainer {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
   }
   .container a{
     width: 80%;

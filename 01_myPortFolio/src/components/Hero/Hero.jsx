@@ -1,5 +1,4 @@
-import React from "react";
-import heroImage from "../../assets/hero-img.png";
+import heroImage from "../../assets/profileImage.png";
 import sunImage from "../../assets/sun.svg";
 import moonImage from "../../assets/moon.svg";
 import styles from "./HeroStyles.module.css";
