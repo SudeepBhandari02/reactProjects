@@ -8,6 +8,7 @@ import githubLight from "../../assets/github-light.svg";
 import githubDark from "../../assets/github-dark.svg";
 import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
+import resume from "../../assets/SUDEEPBHANDARI.pdf"
 import { useTheme } from "../../common/ThemeContext.jsx";
 
 function Hero() {
@@ -46,7 +47,7 @@ function Hero() {
             With a passion for developing modern React web apps for commercial
             businesses.
           </p>
-          <a className="resumeLink" href="#" download>
+          <a className="resumeLink" href={resume} download>
             <button className="hover">Resume</button>
           </a>
         </div>
