@@ -1,88 +1,110 @@
+.thankYouMessage {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #e6ffe6;
+  border: 1px solid #c1f0c1;
+  border-radius: 10px;
+  margin-top: 1rem;
+  color: #2e7d32;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-top: 8rem;
   gap: 3rem;
+}
 
-  h2 {
-    font-size: 3rem;
-    font-weight: bold;
+.container h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.container textarea,
+.container input:not([type="submit"]) {
+  height: 50px;
+  padding-left: 16px;
+  width: 250px;
+}
+
+.container textarea {
+  padding-top: 16px;
+  resize: none;
+  height: 250px;
+}
+
+.container input,
+.container textarea {
+  border-radius: 20px;
+  border: #888 1px solid;
+  box-sizing: border-box;
+  justify-self: center;
+  background-color: var(--background-color);
+  color: var(--form-text-color);
+}
+
+.container ::placeholder {
+  color: var(--form-text-color);
+}
+
+.container input[type="submit"] {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 20px;
+  width: 126px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+  margin: auto;
+}
+
+.container input[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.container input[type="submit"]:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Media queries */
+@media (width >= 800px) {
+  .container textarea,
+  .container input:not([type='submit']) {
+    width: 600px;
+    font-size: 20px;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  .container form {
+    gap: 40px;
+  }
+}
 
-    textarea,
-    input:not([type="submit"]) {
-      height: 50px;
-      padding-left: 16px;
-      width: 250px;
-    }
-
-    textarea {
-      padding-top: 16px;
-      resize: none;
-      height: 250px;
-    }
-
-    input,
-    textarea {
-      border-radius: 20px;
-      border: #888 1px solid;
-      box-sizing: border-box;
-      justify-self: center;
-      background-color: var(--background-color);
-      color: var(--form-text-color);
-    }
-
-    ::placeholder {
-      color: var(--form-text-color);
-    }
-
-    input[type="submit"] {
-      background-color: var(--btn-bg-color);
-      color: var(--btn-text-color);
-      border: none;
-      border-radius: 20px;
-      width: 126px;
-      height: 50px;
-      font-size: 20px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-      transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-      margin: auto;
-    }
-
-    input[type="submit"]:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
-    }
-
-    input[type="submit"]:active {
-      transform: translateY(2px);
-      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-    }
-
-    @media (width >= 800px) {
-        textarea,
-        input:not([type='submit']) {
-          width: 600px;
-          font-size: 20px;
-        }
-        form {
-          gap: 40px;
-        }
-      }
-      
-      @media (width >= 1400px) {
-        textarea,
-        input:not([type='submit']) {
-          width: 800px;
-        }
-      }
+@media (width >= 1400px) {
+  .container textarea,
+  .container input:not([type='submit']) {
+    width: 800px;
   }
 }
