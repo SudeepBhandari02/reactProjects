@@ -42,6 +42,12 @@ const Contact = () => {
     <section className={styles.container}>
       <h2>Contact Me</h2>
 
+      <form name="contact" netlify hidden>
+        <input type="text" name="Name" />
+        <input type="email" name="Email" />
+        <textarea name="message"></textarea>
+      </form>
+
       {isSubmitted ? (
         <div className={styles.thankYouMessage}>
           <h3>Thank you for contacting me!</h3>
