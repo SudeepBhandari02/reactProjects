@@ -8,7 +8,7 @@ import githubLight from "../../assets/github-light.svg";
 import githubDark from "../../assets/github-dark.svg";
 import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
-import resume from "../../assets/SUDEEPBHANDARI.pdf"
+import resume from "../../assets/Sudeep_Bhandari_Resume.pdf"
 import { useTheme } from "../../common/ThemeContext.jsx";
 
 function Hero() {
