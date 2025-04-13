@@ -18,6 +18,26 @@ const Contact = () => {
     message: Yup.string(),
   });
 
+  const handleSubmit = async (values, { resetForm }) => {
+    const formData = new FormData();
+    formData.append('form-name', 'contact');
+    Object.keys(values).forEach((key) => {
+      formData.append(key, values[key]);
+    });
+
+    try {
+      await fetch('/', {
+        method: 'POST',
+        body: formData,
+      });
+
+      setIsSubmitted(true);
+      resetForm();
+    } catch (error) {
+      console.error('Form submission error:', error);
+    }
+  };
+
   return (
     <section className={styles.container}>
       <h2>Contact Me</h2>
@@ -31,33 +51,7 @@ const Contact = () => {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          onSubmit={(values, actions) => {
-            // Create a form data object to simulate native form submit
-            const form = document.createElement('form');
-            form.method = 'POST';
-            form.setAttribute('data-netlify', 'true');
-            form.style.display = 'none';
-
-            const appendField = (name, value) => {
-              const input = document.createElement('input');
-              input.name = name;
-              input.value = value;
-              input.type = 'hidden';
-              form.appendChild(input);
-            };
-
-            appendField('form-name', 'contact');
-            appendField('Name', values.Name);
-            appendField('Email', values.Email);
-            appendField('message', values.message);
-
-            document.body.appendChild(form);
-            form.submit();
-
-            // Show thank you message
-            setIsSubmitted(true);
-            actions.resetForm();
-          }}
+          onSubmit={handleSubmit}
         >
           {(formik) => (
             <form
@@ -68,6 +62,7 @@ const Contact = () => {
               onSubmit={formik.handleSubmit}
             >
               <input type="hidden" name="form-name" value="contact" />
+
               <div hidden>
                 <label>
                   Don’t fill this out: <input name="bot-field" />

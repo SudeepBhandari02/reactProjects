@@ -1,9 +1,9 @@
 import styles from "./Projects.module.css";
 import ProjectCard from "../../common/ProjectCard";
-import project1 from "../../assets/passwordProject.png";
-import project2 from "../../assets/project-quiz.webp";
-import project3 from "../../assets/projectQr.webp";
-import project4 from "../../assets/projectToast.jpg";
+import project1 from "../../assets/dinetimelogo.png";
+import project2 from "../../assets/Company-logo.png";
+import project3 from "../../assets/hero-img.png";
+import project4 from "../../assets/tictactoeLogo.jpg";
 
 const Projects = () => {
   return (
@@ -11,31 +11,34 @@ const Projects = () => {
       <section id="projects" className={styles.container}>
         <h2 className={styles.title}>Projects</h2>
         <div className={styles.projectContainer}>
+
             <ProjectCard
-                link="https://github.com/SudeepBhandari02/Basic-JS-Projects/tree/main/4_PassGenerator"
+                link="https://github.com/SudeepBhandari02/restaurantBookingMobileApp"
                 src={project1}
-                title="Password Generator"
-                info="A stylish password generator using react"
+                title="DineTime"
+                info="Restaurant booking fullstack Mobile App"
             />
+
             <ProjectCard
-                link="https://github.com/SudeepBhandari02/Basic-JS-Projects/tree/main/3_QuizSite"
+                link="https://github.com/SudeepBhandari02/ToDesktopLandingPage_Tailwind"
                 src={project2}
-                title="Quiz App"
-                info="Scoring system based quiz app"
+                title="ToDesktop"
+                info="ToDesktop website clone using tailwind css"
             />
+
             <ProjectCard
-                link="https://github.com/SudeepBhandari02/Basic-JS-Projects/tree/main/6_QrCodeGenerator"
+                link="https://github.com/SudeepBhandari02/reactProjects/tree/main/01_myPortFolio"
                 src={project3}
-                title="Qr Generator"
-                info="URL to QR code generator"
-            />
-            <ProjectCard
-                link="https://github.com/SudeepBhandari02/Basic-JS-Projects/tree/main/5_NotificationBar"
-                src={project4}
-                title="Notify App"
-                info="A cool notification generator"
+                title="MyPortFolio"
+                info="A portfolio website built using react + vite"
             />
             
+            <ProjectCard
+                link="https://github.com/SudeepBhandari02/LearningReact/tree/main/07_ticTacToeGame"
+                src={project4}
+                title="Tictactoe game"
+                info="A Tic-tac-toe react game with history functionality"
+            />
             
         </div>
       </section>
